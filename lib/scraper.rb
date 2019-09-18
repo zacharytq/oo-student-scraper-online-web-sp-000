@@ -22,14 +22,14 @@ class Scraper
     html = Nokogiri::HTML(open(profile_url))
 
     html.css("div.main-wrapper.profile div.vitals-container div.social-icon-container a").each do |icon|
-      if icon.attributes("href").value.include?("twitter")
-        student[:twitter] = icon.attributes("href").value
-      elsif icon.attributes("href").value.include?("github")
-        student[:github] = icon.attributes("href").value
-      elsif icon.attributes("href").value.include?("linkedin")
-        student[:linkedin] = icon.attributes("href").value
-      elsif icon.attributes("href").value.include?("instagram")
-        student[:instagram] = icon.attributes("href").value
+      if icon.attribute("href").value.include?("twitter")
+        student[:twitter] = icon.attribute("href").value
+      elsif icon.attribute("href").value.include?("github")
+        student[:github] = icon.attribute("href").value
+      elsif icon.attribute("href").value.include?("linkedin")
+        student[:linkedin] = icon.attribute("href").value
+      elsif icon.attribute("href").value.include?("instagram")
+        student[:instagram] = icon.attribute("href").value
       end
     end
     student
