@@ -31,6 +31,7 @@ class Scraper
       elsif icon.attributes("href").value.include?("instagram")
         student(:instagram) = icon.attributes("href").value
       end
+    end
 
   end
 
