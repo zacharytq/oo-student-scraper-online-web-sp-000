@@ -32,6 +32,7 @@ class Scraper
         student(:instagram) = icon.attributes("href").value
       end
     end
+    student
 
   end
 
