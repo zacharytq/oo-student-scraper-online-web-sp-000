@@ -23,13 +23,13 @@ class Scraper
 
     html.css("div.main-wrapper.profile div.vitals-container div.social-icon-container a").each do |icon|
       if icon.attributes("href").value.include?("twitter")
-        student(:twitter) = icon.attributes("href").value
+        student[:twitter] = icon.attributes("href").value
       elsif icon.attributes("href").value.include?("github")
-        student(:github) = icon.attributes("href").value
+        student[:github] = icon.attributes("href").value
       elsif icon.attributes("href").value.include?("linkedin")
-        student(:linkedin) = icon.attributes("href").value
+        student[:linkedin] = icon.attributes("href").value
       elsif icon.attributes("href").value.include?("instagram")
-        student(:instagram) = icon.attributes("href").value
+        student[:instagram] = icon.attributes("href").value
       end
     end
     student
