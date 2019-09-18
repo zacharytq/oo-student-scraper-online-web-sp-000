@@ -28,8 +28,8 @@ class Scraper
         student[:github] = icon.attribute("href").value
       elsif icon.attribute("href").value.include?("linkedin")
         student[:linkedin] = icon.attribute("href").value
-      elsif icon.attribute("href").value.include?("instagram")
-        student[:instagram] = icon.attribute("href").value
+      elsif icon.attribute("href").value.include?("blog")
+        student[:blog] = icon.attribute("href").value
       end
     end
     student
