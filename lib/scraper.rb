@@ -32,6 +32,8 @@ class Scraper
         student[:blog] = icon.attribute("href").value
       end
     end
+
+    student[:profile_quote] = html.css("div.main-wrapper.profile div.vitals-container div.vitals-text-container div.profile-quote").text
     student
 
   end
